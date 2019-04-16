@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
 import { fetchHouses } from '../../thunks/fetchHouses'
-import { Loading } from '../Loading/Loading';
-import CardContainer from '../../containers/CardContainer/CardContainer'
+import { Loading } from '../../components/Loading/Loading';
+import CardContainer from '../CardContainer/CardContainer'
 
 class App extends Component {
 
