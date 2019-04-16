@@ -4,6 +4,7 @@ import './App.css';
 import { connect } from 'react-redux'
 import { fetchHouses } from '../../thunks/fetchHouses'
 import { Loading } from '../Loading/Loading';
+import CardContainer from '../../containers/CardContainer/CardContainer'
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
         </div>
         { loading && <Loading />}
         <div className='Display-info'>
+          <CardContainer />
         </div>
       </div>
     );

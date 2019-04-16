@@ -4,7 +4,7 @@ export const Loading = () => {
 
   return(
     <div>
-      <img src={'../../assets'} alt='wolf' />
+      <img src='../../assets/wolf.gif' alt='wolf' />
     </div>
   )
 }
