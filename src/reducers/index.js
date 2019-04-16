@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import { housesReducer } from './housesReducer';
+import { loadingReducer } from './loadingReducer';
 
 const rootReducer = combineReducers ({
-  houses: housesReducer
+  houses: housesReducer,
+  loading: loadingReducer
 })
 
 export default rootReducer
