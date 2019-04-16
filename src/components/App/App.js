@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   render() {
-    const { loading } = this.props
+    const { loading, error } = this.props
     return (
       <div className='App'>
         <div className='App-header'>
@@ -21,6 +21,7 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         { loading && <Loading />}
+        { error && <h2>{error}</h2> }
         <div className='Display-info'>
           <CardContainer />
         </div>
@@ -34,7 +35,8 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export const mapStateToProps = (state) => ({
-  loading: state.loading
+  loading: state.loading,
+  error: state.error
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

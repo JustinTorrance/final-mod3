@@ -1,4 +1,4 @@
-import { storeHouses, isLoading } from "../actions";
+import { storeHouses, isLoading, hasErrored } from "../actions";
 
 export const fetchHouses = () => {
   return async (dispatch) => {
@@ -14,7 +14,7 @@ export const fetchHouses = () => {
         dispatch(isLoading(false))
       }
     } catch(error) {
-      console.log(error.message)
+      dispatch(hasErrored(error.message))
     }
   }
 }
