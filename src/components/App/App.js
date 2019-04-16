@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux'
+import { fetchHouses } from '../../thunks/fetchHouses'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchHouses()
+  }
 
   render() {
     return (
@@ -18,4 +24,8 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapDispatchToProps = (dispatch) => ({
+  fetchHouses: () => dispatch(fetchHouses())
+})
+
+export default connect(null, mapDispatchToProps)(App);
