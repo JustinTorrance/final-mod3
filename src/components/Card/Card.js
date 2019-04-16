@@ -1,10 +1,11 @@
 import React from 'react'
+import shortid from 'shortid'
 
 export const Card = ({name, founded, seats, titles, coatOfArms, ancestralWeapons, words}) => {
 
-  const mappedSeats = seats.map(seat => <li>{seat}</li>)
-  const mappedTitles = titles.map(title => <li>{title}</li>)
-  const mappedAncestralWeapons = ancestralWeapons.map(weapon => <li>{weapon}</li>)
+  const mappedSeats = seats.map(seat => <li key={shortid.generate()} >{seat}</li>)
+  const mappedTitles = titles.map(title => <li key={shortid.generate()} >{title}</li>)
+  const mappedAncestralWeapons = ancestralWeapons.map(weapon => <li key={shortid.generate()} >{weapon}</li>)
 
   return(
     <article>

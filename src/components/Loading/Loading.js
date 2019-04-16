@@ -1,10 +1,11 @@
 import React from 'react'
+import wolf from '../../assets/wolf.gif'
 
 export const Loading = () => {
 
   return(
     <div>
-      <img src='../../assets/wolf.gif' alt='wolf' />
+      <img src={wolf} alt='wolf' />
     </div>
   )
 }
